@@ -1,0 +1,67 @@
+{
+  "collectionName": "components_shared_features",
+  "info": {
+    "displayName": "feature"
+  },
+  "options": {},
+  "attributes": {
+    "rooms": {
+      "type": "string"
+    },
+    "bathrooms": {
+      "type": "string"
+    },
+    "bedrooms": {
+      "type": "string"
+    },
+    "surface": {
+      "type": "string"
+    },
+    "terrace": {
+      "type": "string"
+    },
+    "garden": {
+      "type": "string"
+    },
+    "pool": {
+      "type": "string"
+    },
+    "garage": {
+      "type": "string"
+    },
+    "parking": {
+      "type": "string"
+    },
+    "airConditioning": {
+      "type": "string"
+    },
+    "heating": {
+      "type": "string"
+    },
+    "furnished": {
+      "type": "string"
+    },
+    "elevator": {
+      "type": "string"
+    },
+    "balcony": {
+      "type": "string"
+    },
+    "storage": {
+      "type": "string"
+    },
+    "laundry": {
+      "type": "string"
+    },
+    "fireplace": {
+      "type": "string"
+    },
+    "alarm": {
+      "type": "string"
+    },
+    "internet": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
