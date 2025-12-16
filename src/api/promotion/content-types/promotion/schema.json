@@ -32,6 +32,14 @@
       },
       "targetField": "Title"
     },
+    "ubication": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
     "description": {
       "type": "richtext",
       "pluginOptions": {
@@ -69,6 +77,22 @@
         "videos",
         "audios"
       ]
+    },
+    "postCode": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "municipality": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

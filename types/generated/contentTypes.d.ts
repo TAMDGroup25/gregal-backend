@@ -411,6 +411,12 @@ export interface ApiPromotionPromotion extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::promotion.promotion'
     >;
+    municipality: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     plans: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
@@ -418,6 +424,12 @@ export interface ApiPromotionPromotion extends Struct.CollectionTypeSchema {
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
+        };
+      }>;
+    postCode: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
@@ -428,6 +440,12 @@ export interface ApiPromotionPromotion extends Struct.CollectionTypeSchema {
         };
       }>;
     Title: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    ubication: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
