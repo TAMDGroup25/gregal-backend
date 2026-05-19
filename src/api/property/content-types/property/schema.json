@@ -69,10 +69,7 @@
       },
       "multiple": false,
       "required": true,
-      "allowedTypes": [
-        "images",
-        "files"
-      ]
+      "allowedTypes": ["images", "files"]
     },
     "gallery": {
       "type": "media",
@@ -82,10 +79,7 @@
         }
       },
       "multiple": true,
-      "allowedTypes": [
-        "images",
-        "files"
-      ]
+      "allowedTypes": ["images", "files"]
     },
     "price": {
       "type": "string",
@@ -103,10 +97,7 @@
         }
       },
       "required": true,
-      "enum": [
-        "Compra",
-        "Alquiler"
-      ]
+      "enum": ["Compra", "Alquiler"]
     },
     "propertyType": {
       "type": "enumeration",
@@ -184,6 +175,34 @@
       },
       "required": true,
       "default": false
+    },
+    "hasVirtualTour": {
+      "type": "boolean",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "default": false
+    },
+    "virtualTourConfig": {
+      "type": "json",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "tourCoverImage": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
     }
   }
 }
