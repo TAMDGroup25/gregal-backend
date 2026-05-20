@@ -698,7 +698,10 @@ export interface ApiPropertyProperty extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    virtualTourConfig: Schema.Attribute.JSON &
+    virtualTourFolder: Schema.Attribute.Relation<
+      'oneToOne',
+      'plugin::upload.folder'
+    > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;

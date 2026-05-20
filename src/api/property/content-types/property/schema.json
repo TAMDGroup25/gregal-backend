@@ -185,8 +185,10 @@
       },
       "default": false
     },
-    "virtualTourConfig": {
-      "type": "json",
+    "virtualTourFolder": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::upload.folder",
       "pluginOptions": {
         "i18n": {
           "localized": false
