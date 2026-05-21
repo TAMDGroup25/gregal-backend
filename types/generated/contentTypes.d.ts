@@ -796,6 +796,45 @@ export interface ApiPropertyProperty extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiValuationRequestValuationRequest
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'valuation_requests';
+  info: {
+    displayName: 'Valuation Request';
+    pluralName: 'valuation-requests';
+    singularName: 'valuation-request';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    answers: Schema.Attribute.JSON & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.Email & Schema.Attribute.Required;
+    firstName: Schema.Attribute.String & Schema.Attribute.Required;
+    lastName: Schema.Attribute.String & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::valuation-request.valuation-request'
+    > &
+      Schema.Attribute.Private;
+    phone: Schema.Attribute.String;
+    propertyType: Schema.Attribute.Enumeration<
+      ['house', 'apartment', 'land', 'commercial']
+    > &
+      Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    salutation: Schema.Attribute.Enumeration<['mr', 'mrs']> &
+      Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1309,6 +1348,7 @@ declare module '@strapi/strapi' {
       'api::contact-message.contact-message': ApiContactMessageContactMessage;
       'api::promotion.promotion': ApiPromotionPromotion;
       'api::property.property': ApiPropertyProperty;
+      'api::valuation-request.valuation-request': ApiValuationRequestValuationRequest;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "valuation_requests",
+  "info": {
+    "singularName": "valuation-request",
+    "pluralName": "valuation-requests",
+    "displayName": "Valuation Request"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "salutation": {
+      "type": "enumeration",
+      "enum": ["mr", "mrs"],
+      "required": true
+    },
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "phone": {
+      "type": "string"
+    },
+    "propertyType": {
+      "type": "enumeration",
+      "enum": ["house", "apartment", "land", "commercial"],
+      "required": true
+    },
+    "answers": {
+      "type": "json",
+      "required": true
+    }
+  }
+}
